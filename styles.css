@@ -148,7 +148,14 @@ button { font: inherit; }
 .aurora-screen { position: relative; height: 330px; overflow: hidden; padding: 35px; background: radial-gradient(circle at 65% 40%, #5f55db 0 9%, transparent 10%), linear-gradient(135deg,#1b164e,#5448cf 48%,#f69ac2); }
 .aurora-screen > span { position: relative; z-index: 2; color: white; font: 500 clamp(25px,3.5vw,58px)/1 var(--display); letter-spacing: -.06em; }
 .aurora-sphere { position: absolute; width: 220px; height: 220px; right: 8%; bottom: -60px; border-radius: 50%; background: radial-gradient(circle at 30% 28%,#f8d6ff,#7969ed 55%,#20186f); box-shadow: -30px 20px 80px rgba(255,175,238,.5); }
-.visual-studio { background: #c8ff3d; }
+.visual-studio { background: #dcece6; }
+.clinic-preview { position: relative; width: 82%; height: 80%; overflow: hidden; border-radius: 4px; box-shadow: 0 30px 70px rgba(6,78,73,.24); transform: rotate(1.5deg); transition: transform .5s; }
+.clinic-preview::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg,rgba(10,59,55,.78),rgba(10,59,55,.12) 62%,transparent); }
+.clinic-preview img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.clinic-preview-copy { position: absolute; z-index: 1; left: 7%; top: 10%; color: white; }
+.clinic-preview-copy span { font-size: 8px; font-weight: 700; letter-spacing: .18em; }
+.clinic-preview-copy b { display: block; margin-top: 15px; font: 500 clamp(32px,5vw,64px)/.96 var(--display); letter-spacing: -.07em; }
+.project-visual:hover .clinic-preview { transform: rotate(.5deg) scale(1.02); }
 .studio-poster { position: relative; width: 78%; height: 78%; padding: 25px; overflow: hidden; background: #e8e2d2; color: #171717; transform: rotate(2deg); transition: transform .5s; }
 .project-visual:hover .studio-poster { transform: rotate(.5deg) scale(1.02); }
 .studio-small { font-size: 8px; letter-spacing: .15em; }
@@ -251,7 +258,7 @@ button { font: inherit; }
   .browser-frame { width: 90%; }
   .aurora-screen { height: 235px; padding: 22px; }
   .aurora-sphere { width: 150px; height: 150px; }
-  .studio-poster, .coffee-card { width: 82%; height: 80%; }
+  .studio-poster, .coffee-card, .clinic-preview { width: 82%; height: 80%; }
   .project-meta { align-items: flex-start; }
   .project-meta > div { display: block; }
   .project-meta h3 { margin-top: 8px; }
