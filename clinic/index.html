@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Forma Clinic — современная частная клиника с доказательным подходом и внимательными врачами." />
+    <meta name="theme-color" content="#f5f8f7" />
+    <title>Forma Clinic — частная клиника</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a class="brand" href="#top" aria-label="Forma Clinic — на главную">
+        <span class="brand-mark">F</span>
+        <span>FORMA<small>CLINIC</small></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="#directions">Направления</a>
+        <a href="#doctors">Врачи</a>
+        <a href="#about">О клинике</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="phone" href="tel:+74951234567">+7 495 123-45-67</a>
+        <a class="button button-small" href="#appointment">Записаться</a>
+      </div>
+
+      <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+    </header>
+
+    <div class="mobile-menu" aria-hidden="true">
+      <a href="#directions">Направления</a>
+      <a href="#doctors">Врачи</a>
+      <a href="#about">О клинике</a>
+      <a href="#appointment">Записаться</a>
+      <a href="../">← Вернуться в портфолио</a>
+    </div>
+
+    <main id="top">
+      <section class="hero">
+        <img class="hero-photo" src="../assets/clinic-hero.png" alt="Врач в интерьере клиники Forma" />
+        <div class="hero-shade"></div>
+        <div class="hero-content reveal">
+          <p class="kicker"><i></i> Забота, которой можно доверять</p>
+          <h1>Медицина,<br /><em>в которой спокойно.</em></h1>
+          <p class="hero-lead">Точные диагнозы, сильные врачи и понятный план лечения — без лишних назначений и тревоги.</p>
+          <div class="hero-buttons">
+            <a class="button" href="#appointment">Записаться на приём <span>↗</span></a>
+            <a class="text-link" href="#directions">Выбрать направление ↓</a>
+          </div>
+        </div>
+
+        <div class="hero-card reveal">
+          <div class="hero-card-icon">24<sup>/7</sup></div>
+          <div><strong>Мы всегда рядом</strong><p>Дежурный врач ответит в любое время</p></div>
+        </div>
+      </section>
+
+      <section class="trust-strip">
+        <div><strong>15+</strong><span>лет заботимся<br />о здоровье</span></div>
+        <div><strong>48</strong><span>врачей высшей<br />категории</span></div>
+        <div><strong>4.9</strong><span>средняя оценка<br />пациентов</span></div>
+        <div><strong>35 000</strong><span>пациентов доверяют<br />нам ежегодно</span></div>
+      </section>
+
+      <section class="directions section" id="directions">
+        <div class="section-title reveal">
+          <div><p class="kicker"><i></i> Направления</p><h2>Всё необходимое<br />в одной клинике</h2></div>
+          <p>Объединяем диагностику, консультации и лечение, чтобы вы получали помощь быстро и в одном месте.</p>
+        </div>
+
+        <div class="direction-grid">
+          <a class="direction-card feature reveal" href="#appointment">
+            <span class="number">01</span>
+            <div class="line-icon heart-icon">♡</div>
+            <h3>Кардиология</h3>
+            <p>Диагностика сердца и сосудов, консультации и персональные программы наблюдения.</p>
+            <b>Подробнее →</b>
+          </a>
+          <a class="direction-card reveal" href="#appointment">
+            <span class="number">02</span>
+            <div class="line-icon">✦</div>
+            <h3>Терапия</h3>
+            <p>Комплексный взгляд на здоровье и координация лечения у профильных специалистов.</p>
+            <b>Подробнее →</b>
+          </a>
+          <a class="direction-card reveal" href="#appointment">
+            <span class="number">03</span>
+            <div class="line-icon">⌁</div>
+            <h3>Неврология</h3>
+            <p>Помощь при головной боли, нарушениях сна, боли в спине и других состояниях.</p>
+            <b>Подробнее →</b>
+          </a>
+          <a class="direction-card reveal" href="#appointment">
+            <span class="number">04</span>
+            <div class="line-icon">◉</div>
+            <h3>Диагностика</h3>
+            <p>УЗИ, функциональные исследования и лабораторные анализы без ожидания.</p>
+            <b>Подробнее →</b>
+          </a>
+        </div>
+      </section>
+
+      <section class="approach" id="about">
+        <div class="approach-visual reveal">
+          <div class="architecture-card">
+            <span>FORMA</span>
+            <div class="arch-circle"></div>
+            <p>Пространство для вашего спокойствия</p>
+          </div>
+        </div>
+        <div class="approach-copy reveal">
+          <p class="kicker light"><i></i> Наш подход</p>
+          <h2>Лечим человека,<br /><em>а не анализы.</em></h2>
+          <p>В Forma Clinic врач слышит пациента, объясняет каждое решение и опирается на современные клинические рекомендации.</p>
+          <ul>
+            <li><span>01</span><div><strong>Доказательная медицина</strong><p>Назначаем только необходимое и всегда объясняем зачем.</p></div></li>
+            <li><span>02</span><div><strong>Командная работа</strong><p>Врачи разных специальностей обсуждают сложные случаи вместе.</p></div></li>
+            <li><span>03</span><div><strong>Уважение ко времени</strong><p>Приём начинается вовремя, результаты доступны онлайн.</p></div></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="doctors section" id="doctors">
+        <div class="section-title reveal">
+          <div><p class="kicker"><i></i> Наша команда</p><h2>Врачи, которым<br />доверяют</h2></div>
+          <p>Специалисты с большим клиническим опытом, которым важно не только вылечить, но и поддержать.</p>
+        </div>
+
+        <div class="doctor-grid">
+          <article class="doctor-card reveal">
+            <div class="doctor-portrait portrait-one"><span>АК</span></div>
+            <div class="doctor-info"><p>Кардиолог · 16 лет опыта</p><h3>Анна Ковалева</h3><a href="#appointment">Записаться →</a></div>
+          </article>
+          <article class="doctor-card reveal">
+            <div class="doctor-portrait portrait-two"><span>МС</span></div>
+            <div class="doctor-info"><p>Невролог · 12 лет опыта</p><h3>Максим Соколов</h3><a href="#appointment">Записаться →</a></div>
+          </article>
+          <article class="doctor-card reveal">
+            <div class="doctor-portrait portrait-three"><span>ЕВ</span></div>
+            <div class="doctor-info"><p>Терапевт · 10 лет опыта</p><h3>Елена Волкова</h3><a href="#appointment">Записаться →</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="appointment" id="appointment">
+        <div class="appointment-copy reveal">
+          <p class="kicker light"><i></i> Запись на приём</p>
+          <h2>Первый шаг<br /><em>к хорошему самочувствию.</em></h2>
+          <p>Оставьте контакты — администратор перезвонит, уточнит детали и подберёт удобное время.</p>
+          <div class="clinic-contact"><span>Ежедневно, круглосуточно</span><a href="tel:+74951234567">+7 495 123-45-67</a></div>
+        </div>
+
+        <form class="appointment-form reveal">
+          <label>Как к вам обращаться?<input type="text" name="name" placeholder="Ваше имя" required /></label>
+          <label>Номер телефона<input type="tel" name="phone" placeholder="+7 999 000-00-00" required /></label>
+          <label>Направление<select name="direction"><option>Выберите направление</option><option>Кардиология</option><option>Терапия</option><option>Неврология</option><option>Диагностика</option></select></label>
+          <label class="consent"><input type="checkbox" required /><span>Я согласен на обработку персональных данных</span></label>
+          <button class="button form-button" type="submit">Отправить заявку <span>↗</span></button>
+          <p class="form-status" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand footer-brand" href="#top"><span class="brand-mark">F</span><span>FORMA<small>CLINIC</small></span></a>
+      <div><p>Москва, ул. Тихая, 12</p><p>Ежедневно 24/7</p></div>
+      <div><a href="tel:+74951234567">+7 495 123-45-67</a><a href="mailto:hello@formaclinic.ru">hello@formaclinic.ru</a></div>
+      <a class="portfolio-back" href="../">← Вернуться в портфолио</a>
+      <p class="copyright">© <span id="year"></span> Forma Clinic. Демонстрационный проект.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
