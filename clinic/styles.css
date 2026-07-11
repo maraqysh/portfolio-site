@@ -107,7 +107,21 @@ h1 em, h2 em { color: var(--coral); font-style: normal; }
 .line-icon { width: 70px; height: 70px; margin-top: 35px; display: grid; place-items: center; border-radius: 20px; background: rgba(255,255,255,.5); font-size: 28px; transform: rotate(-4deg); }
 .direction-card h3 { margin: auto 0 10px; font: 600 23px var(--display); letter-spacing: -.06em; text-transform: uppercase; }
 .direction-card p { max-width: 500px; margin: 0 0 20px; font-size: 11px; line-height: 1.6; opacity: .78; }
-.direction-card b { padding-top: 15px; border-top: 1px solid currentColor; font-size: 9px; text-transform: uppercase; }
+.direction-more { width: 100%; padding: 15px 0 0; display: flex; align-items: center; justify-content: space-between; border: 0; border-top: 1px solid currentColor; color: inherit; background: transparent; font-size: 9px; font-weight: 800; text-align: left; text-transform: uppercase; cursor: pointer; }
+.direction-more span { width: 25px; height: 25px; display: grid; place-items: center; border: 1px solid currentColor; border-radius: 50%; font-size: 16px; line-height: 1; transition: transform .25s; }
+.direction-card.is-open { min-height: 0; transform: none; }
+.direction-card.is-open .direction-more span { transform: rotate(45deg); }
+.direction-details { margin-top: 22px; padding-top: 20px; border-top: 1px dashed currentColor; }
+.direction-details h4 { margin: 0 0 10px; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; }
+.direction-details > p { margin-bottom: 14px; opacity: .82; }
+.direction-details ul { margin: 0; padding: 0; list-style: none; }
+.direction-details li { position: relative; margin-top: 8px; padding-left: 16px; font-size: 10px; line-height: 1.5; }
+.direction-details li::before { content: "✦"; position: absolute; left: 0; color: currentColor; }
+.direction-price { margin-top: 20px; padding: 15px 0; display: flex; align-items: center; justify-content: space-between; gap: 15px; border-top: 1px solid currentColor; border-bottom: 1px solid currentColor; }
+.direction-price span { font-size: 9px; text-transform: uppercase; }
+.direction-price strong { font-size: 14px; }
+.direction-book { margin-top: 15px; min-height: 42px; padding: 0 16px; display: inline-flex; align-items: center; justify-content: center; border-radius: 13px; color: white; background: var(--ink); font-size: 9px; font-weight: 800; text-transform: uppercase; }
+.direction-card:nth-child(1) .direction-book { color: var(--ink); background: var(--lime); }
 
 .approach { padding: 80px 5vw; display: grid; grid-template-columns: .85fr 1.15fr; gap: 18px; background: white; }
 .approach-visual, .approach-copy { border-radius: 40px; }
@@ -202,6 +216,9 @@ h1 em, h2 em { color: var(--coral); font-style: normal; }
   .direction-grid { grid-template-columns: minmax(0,1fr); }
   .direction-card, .direction-card:nth-child(1), .direction-card:nth-child(4) { grid-column: auto; grid-row: auto; min-height: 330px; }
   .direction-card, .direction-card h3, .direction-card p { min-width: 0; overflow-wrap: anywhere; }
+  .direction-card.is-open { min-height: 0; }
+  .direction-details { margin-top: 18px; }
+  .direction-price { align-items: flex-start; flex-direction: column; gap: 6px; }
   .approach { padding: 20px; grid-template-columns: minmax(0,1fr); }
   .approach > * { min-width: 0; width: 100%; }
   .approach-visual, .approach-copy { border-radius: 30px; }
