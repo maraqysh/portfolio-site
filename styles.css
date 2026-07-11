@@ -73,6 +73,7 @@ button { font: inherit; }
 .mobile-menu a { font: 500 clamp(32px,10vw,52px) var(--display); }
 
 .section-pad { padding-left: clamp(22px, 5vw, 80px); padding-right: clamp(22px, 5vw, 80px); }
+section[id] { scroll-margin-top: 74px; }
 .hero {
   position: relative;
   min-height: 100svh;
@@ -245,8 +246,12 @@ button { font: inherit; }
   .hero { min-height: 760px; padding-bottom: 32px; }
   .hero-top { display: block; }
   .hero-note { width: 90%; margin-top: 24px; }
-  .hero-title { margin-top: 80px; font-size: clamp(43px,13vw,76px); }
-  .hero-orbit { top: 36%; opacity: .85; }
+  .hero-title { margin-top: 92px; max-width: 100%; font-size: clamp(38px,10.8vw,54px); line-height: 1.04; letter-spacing: -.065em; overflow-wrap: anywhere; }
+  .hero-orbit { top: 33%; right: -18px; width: 118px; height: 118px; opacity: .68; }
+  .hero-orbit .orbit-ring { animation: none; }
+  .hero-orbit .orbit-core { inset: 30px; font-size: 15px; }
+  .hero-orbit .dot-one { right: -2px; bottom: 22px; width: 21px; height: 21px; }
+  .hero-orbit .dot-two { left: 13px; bottom: -4px; }
   .circle-link { width: 95px; height: 95px; padding: 18px; }
   .availability-card p { display: none; }
   .section-heading { display: block; margin-bottom: 50px; }
@@ -260,16 +265,18 @@ button { font: inherit; }
   .aurora-sphere { width: 150px; height: 150px; }
   .studio-poster, .coffee-card, .clinic-preview { width: 82%; height: 80%; }
   .project-meta { align-items: flex-start; }
+  .project-meta > * { min-width: 0; }
   .project-meta > div { display: block; }
   .project-meta h3 { margin-top: 8px; }
-  .project-meta p { max-width: 120px; }
+  .project-meta p { max-width: 120px; overflow-wrap: anywhere; }
   .service-grid { grid-template-columns: 1fr; gap: 14px; border: 0; }
   .service-card, .service-card:first-child { min-height: 450px; border: 1px solid var(--line); }
   .service-card.accent { transform: none; box-shadow: none; }
   .process-intro { display: block; }
   .process-intro h2 { width: 100%; margin-top: 25px; }
   .steps { margin-top: 55px; }
-  .steps li { grid-template-columns: 40px 1fr 70px; align-items: start; }
+  .steps li { grid-template-columns: 34px minmax(0,1fr) 64px; gap: 14px; align-items: start; }
+  .steps h3, .steps p { min-width: 0; overflow-wrap: anywhere; }
   .steps p { grid-column: 2 / 4; }
   .contact { min-height: 800px; padding-top: 95px; gap: 80px; }
   .contact footer { gap: 20px; align-items: flex-end; }
