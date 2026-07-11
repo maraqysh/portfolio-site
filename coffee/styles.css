@@ -21,6 +21,7 @@ button { color: inherit; }
 img { max-width: 100%; }
 .skip-link { position: fixed; z-index: 100; left: 14px; top: 14px; padding: 12px 16px; background: var(--paper); transform: translateY(-150%); }
 .skip-link:focus { transform: translateY(0); }
+:focus-visible { outline: 3px solid var(--terracotta); outline-offset: 4px; }
 
 .site-header { position: fixed; z-index: 40; inset: 0 0 auto; height: 88px; padding: 0 clamp(22px, 4.5vw, 76px); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; color: white; transition: background .3s, height .3s, color .3s, box-shadow .3s; }
 .site-header.scrolled { height: 72px; color: var(--espresso); background: rgba(251, 247, 239, .92); box-shadow: 0 1px 0 var(--line); backdrop-filter: blur(16px); }

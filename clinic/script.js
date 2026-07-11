@@ -6,12 +6,16 @@ function toggleMenu(open) {
   menuButton.classList.toggle('active', open);
   mobileMenu.classList.toggle('open', open);
   menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
   mobileMenu.setAttribute('aria-hidden', String(!open));
   document.body.style.overflow = open ? 'hidden' : '';
 }
 
 menuButton.addEventListener('click', () => toggleMenu(!mobileMenu.classList.contains('open')));
 mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => toggleMenu(false)));
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && mobileMenu.classList.contains('open')) toggleMenu(false);
+});
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -34,6 +38,7 @@ document.querySelectorAll('.direction-more').forEach((button) => {
     const willOpen = button.getAttribute('aria-expanded') !== 'true';
 
     button.setAttribute('aria-expanded', String(willOpen));
+    button.querySelector('span').textContent = willOpen ? '−' : '+';
     details.hidden = !willOpen;
     card.classList.toggle('is-open', willOpen);
   });

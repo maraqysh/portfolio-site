@@ -7,12 +7,16 @@ function setMenu(open) {
   menuButton.classList.toggle('active', open);
   mobileMenu.classList.toggle('open', open);
   menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
   mobileMenu.setAttribute('aria-hidden', String(!open));
   document.body.style.overflow = open ? 'hidden' : '';
 }
 
 menuButton.addEventListener('click', () => setMenu(!mobileMenu.classList.contains('open')));
 menuLinks.forEach((link) => link.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && mobileMenu.classList.contains('open')) setMenu(false);
+});
 
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 24);
