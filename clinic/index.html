@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260711-2" />
+    <link rel="stylesheet" href="styles.css?v=20260711-3" />
   </head>
   <body>
     <header class="header">
@@ -75,34 +75,62 @@
         </div>
 
         <div class="direction-grid">
-          <a class="direction-card feature reveal" href="#appointment">
+          <article class="direction-card feature reveal">
             <span class="number">01</span>
             <div class="line-icon heart-icon">♡</div>
             <h3>Кардиология</h3>
             <p>Диагностика сердца и сосудов, консультации и персональные программы наблюдения.</p>
-            <b>Подробнее →</b>
-          </a>
-          <a class="direction-card reveal" href="#appointment">
+            <button class="direction-more" type="button" aria-expanded="false" aria-controls="cardiology-details">Подробнее <span>+</span></button>
+            <div class="direction-details" id="cardiology-details" hidden>
+              <h4>С какими запросами работаем</h4>
+              <p>Изменения давления, учащённое сердцебиение, одышка при нагрузке и профилактическое наблюдение.</p>
+              <ul><li>Консультация кардиолога</li><li>ЭКГ и ЭхоКГ</li><li>Холтеровское мониторирование</li></ul>
+              <div class="direction-price"><span>Первичный приём</span><strong>от 3 500 ₽</strong></div>
+              <a class="direction-book" href="#appointment">Записаться на приём →</a>
+            </div>
+          </article>
+          <article class="direction-card reveal">
             <span class="number">02</span>
             <div class="line-icon">✦</div>
             <h3>Терапия</h3>
             <p>Комплексный взгляд на здоровье и координация лечения у профильных специалистов.</p>
-            <b>Подробнее →</b>
-          </a>
-          <a class="direction-card reveal" href="#appointment">
+            <button class="direction-more" type="button" aria-expanded="false" aria-controls="therapy-details">Подробнее <span>+</span></button>
+            <div class="direction-details" id="therapy-details" hidden>
+              <h4>С какими запросами работаем</h4>
+              <p>Слабость, повышенная температура, частые простуды, контроль хронических состояний и ежегодный чек-ап.</p>
+              <ul><li>Осмотр и план обследования</li><li>Расшифровка анализов</li><li>Направление к специалистам</li></ul>
+              <div class="direction-price"><span>Первичный приём</span><strong>от 3 000 ₽</strong></div>
+              <a class="direction-book" href="#appointment">Записаться на приём →</a>
+            </div>
+          </article>
+          <article class="direction-card reveal">
             <span class="number">03</span>
             <div class="line-icon">⌁</div>
             <h3>Неврология</h3>
             <p>Помощь при головной боли, нарушениях сна, боли в спине и других состояниях.</p>
-            <b>Подробнее →</b>
-          </a>
-          <a class="direction-card reveal" href="#appointment">
+            <button class="direction-more" type="button" aria-expanded="false" aria-controls="neurology-details">Подробнее <span>+</span></button>
+            <div class="direction-details" id="neurology-details" hidden>
+              <h4>С какими запросами работаем</h4>
+              <p>Головная боль, головокружение, нарушения сна, дискомфорт в спине и восстановление после нагрузок.</p>
+              <ul><li>Консультация невролога</li><li>Диагностика головной боли</li><li>Индивидуальный план наблюдения</li></ul>
+              <div class="direction-price"><span>Первичный приём</span><strong>от 3 500 ₽</strong></div>
+              <a class="direction-book" href="#appointment">Записаться на приём →</a>
+            </div>
+          </article>
+          <article class="direction-card reveal">
             <span class="number">04</span>
             <div class="line-icon">◉</div>
             <h3>Диагностика</h3>
             <p>УЗИ, функциональные исследования и лабораторные анализы без ожидания.</p>
-            <b>Подробнее →</b>
-          </a>
+            <button class="direction-more" type="button" aria-expanded="false" aria-controls="diagnostics-details">Подробнее <span>+</span></button>
+            <div class="direction-details" id="diagnostics-details" hidden>
+              <h4>Доступные исследования</h4>
+              <p>Большинство исследований можно пройти в день обращения, а результаты получить в электронном виде.</p>
+              <ul><li>УЗИ внутренних органов</li><li>ЭКГ и функциональные тесты</li><li>Лабораторные анализы</li></ul>
+              <div class="direction-price"><span>Исследования</span><strong>от 900 ₽</strong></div>
+              <a class="direction-book" href="#appointment">Записаться →</a>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -175,6 +203,6 @@
       <p class="copyright">© <span id="year"></span> Forma Clinic. Демонстрационный проект.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260711-3"></script>
   </body>
 </html>

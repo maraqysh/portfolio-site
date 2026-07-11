@@ -27,6 +27,18 @@ document.querySelectorAll('.reveal').forEach((element, index) => {
   observer.observe(element);
 });
 
+document.querySelectorAll('.direction-more').forEach((button) => {
+  button.addEventListener('click', () => {
+    const details = document.getElementById(button.getAttribute('aria-controls'));
+    const card = button.closest('.direction-card');
+    const willOpen = button.getAttribute('aria-expanded') !== 'true';
+
+    button.setAttribute('aria-expanded', String(willOpen));
+    details.hidden = !willOpen;
+    card.classList.toggle('is-open', willOpen);
+  });
+});
+
 document.querySelector('.appointment-form').addEventListener('submit', (event) => {
   event.preventDefault();
   const status = event.currentTarget.querySelector('.form-status');
