@@ -67,12 +67,12 @@ em { color: var(--orange); font-style: italic; }
 .hero-status span { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; }
 .hero-status i { display: inline-block; width: 7px; height: 7px; margin-right: 6px; border-radius: 50%; background: #9ed374; box-shadow: 0 0 0 4px rgba(158,211,116,.18); }
 .hero-status p { margin: 6px 0 0 15px; font-size: 10px; opacity: .7; }
-.hero-edition { position: absolute; z-index: 2; right: 5.5vw; top: 236px; margin: 0; font-size: 8px; font-weight: 700; letter-spacing: .18em; writing-mode: vertical-rl; }
 .hero-address { position: absolute; z-index: 2; right: 5.5vw; bottom: 62px; min-width: 245px; display: flex; justify-content: space-between; gap: 24px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.45); font-size: 10px; }
 .hero-address b { font-weight: 600; opacity: .7; }
 
 .ticker { overflow: hidden; color: var(--cream); background: var(--terracotta); }
-.ticker-track { width: max-content; display: flex; align-items: center; gap: 34px; padding: 18px 0; animation: ticker 24s linear infinite; font: 13px var(--serif); letter-spacing: .08em; }
+.ticker-track { width: max-content; display: flex; align-items: center; animation: ticker 24s linear infinite; font: 13px var(--serif); letter-spacing: .08em; }
+.ticker-group { width: max(100vw, 680px); flex: none; display: flex; align-items: center; justify-content: space-around; gap: 34px; padding: 18px 0; white-space: nowrap; }
 .ticker i { font-style: normal; color: #f2af91; }
 @keyframes ticker { to { transform: translateX(-50%); } }
 
@@ -273,9 +273,9 @@ body { background-image: linear-gradient(90deg, rgba(45,31,25,.035) 1px, transpa
   .hero-actions .button { width: 100%; }
   .hero-actions .text-button { align-self: flex-start; }
   .hero-status { top: 95px; right: 20px; }
-  .hero-edition { display: none; }
   .hero-address { display: none; }
-  .ticker-track { padding: 14px 0; font-size: 11px; }
+  .ticker-track { font-size: 11px; }
+  .ticker-group { padding: 14px 0; }
   .menu-section { padding-top: 85px; padding-bottom: 90px; }
   .section-title { display: block; }
   .section-title h2 { margin-top: 24px; font-size: 50px; }
