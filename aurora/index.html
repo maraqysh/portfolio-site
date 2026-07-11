@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260711-4" />
+    <link rel="stylesheet" href="styles.css?v=20260711-5" />
   </head>
   <body>
     <a class="skip-link" href="#main">Перейти к содержанию</a>
@@ -31,7 +31,7 @@
 
     <main id="main">
       <section class="hero" id="top">
-        <img src="assets/living-after.jpg" alt="Современный интерьер гостиной Aurora Space" />
+        <img src="assets/living-after.jpg" alt="Современный интерьер гостиной Aurora Space" decoding="async" fetchpriority="high" />
         <div class="hero-overlay"></div>
         <div class="hero-grid" aria-hidden="true"></div>
         <div class="hero-copy">
@@ -63,8 +63,8 @@
 
         <article class="project reveal">
           <div class="compare" data-compare style="--position: 52%">
-            <img class="compare-after" src="assets/living-after.jpg" alt="Гостиная после обновления" />
-            <img class="compare-before" src="assets/living-before.jpg" alt="Гостиная до обновления" />
+            <img class="compare-after" src="assets/living-after.jpg" alt="Гостиная после обновления" loading="lazy" decoding="async" />
+            <img class="compare-before" src="assets/living-before.jpg" alt="Гостиная до обновления" loading="lazy" decoding="async" />
             <span class="compare-label before-label">ДО</span><span class="compare-label after-label">ПОСЛЕ</span>
             <div class="compare-line" aria-hidden="true"><span></span></div>
             <input class="compare-range" type="range" min="0" max="100" value="52" aria-label="Сравнить гостиную до и после ремонта" />
@@ -74,8 +74,8 @@
 
         <article class="project reveal">
           <div class="compare" data-compare style="--position: 44%">
-            <img class="compare-after" src="assets/kitchen-after.jpg" alt="Кухня после обновления" />
-            <img class="compare-before" src="assets/kitchen-before.jpg" alt="Кухня до обновления" />
+            <img class="compare-after" src="assets/kitchen-after.jpg" alt="Кухня после обновления" loading="lazy" decoding="async" />
+            <img class="compare-before" src="assets/kitchen-before.jpg" alt="Кухня до обновления" loading="lazy" decoding="async" />
             <span class="compare-label before-label">ДО</span><span class="compare-label after-label">ПОСЛЕ</span>
             <div class="compare-line" aria-hidden="true"><span></span></div>
             <input class="compare-range" type="range" min="0" max="100" value="44" aria-label="Сравнить кухню до и после ремонта" />
@@ -99,11 +99,11 @@
       <section class="calculator section" id="calculator">
         <div class="calculator-copy reveal"><p class="eyebrow dark"><span></span> Project configurator</p><h2>Соберите<br /><em>свой проект.</em></h2><p>Меняйте параметры — стоимость и срок пересчитаются мгновенно. После знакомства и обмеров подготовим точную смету.</p></div>
         <form class="calc-form reveal" id="calc-form">
-          <label class="field"><span>Площадь объекта</span><div class="area-input"><input id="area" type="number" min="20" max="500" value="68" /><b>м²</b></div></label>
-          <label class="field"><span>Тип объекта</span><select id="property"><option value="1">Квартира</option><option value="1.12">Загородный дом</option><option value="1.18">Коммерческое пространство</option></select></label>
+          <label class="field"><span>Площадь объекта</span><div class="area-input"><input id="area" name="area" type="number" min="20" max="500" value="68" inputmode="numeric" /><b>м²</b></div></label>
+          <label class="field"><span>Тип объекта</span><select id="property" name="property"><option value="1">Квартира</option><option value="1.12">Загородный дом</option><option value="1.18">Коммерческое пространство</option></select></label>
           <fieldset><legend>Пакет работ</legend><label><input type="radio" name="package" value="4200" /><span><b>Концепция</b><small>Планировка и стиль</small></span></label><label><input type="radio" name="package" value="6500" checked /><span><b>Полный проект</b><small>Чертежи и визуализации</small></span></label><label><input type="radio" name="package" value="9500" /><span><b>Под ключ</b><small>Проект и сопровождение</small></span></label></fieldset>
           <div class="extras"><label><input id="supervision" type="checkbox" checked /><span>Авторский надзор</span></label><label><input id="supply" type="checkbox" /><span>Комплектация материалами</span></label></div>
-          <div class="calc-result"><span>Ориентировочная стоимость</span><output id="price">477 360 ₽</output><p>Срок проекта: <b id="duration">8–10 недель</b></p></div>
+          <div class="calc-result" aria-live="polite"><span>Ориентировочная стоимость</span><output id="price" for="area property supervision supply">477 360 ₽</output><p>Срок проекта: <b id="duration">8–10 недель</b></p></div>
         </form>
       </section>
 
@@ -114,6 +114,6 @@
     </main>
 
     <footer class="footer"><a class="logo" href="#top"><span>A</span><b>AURORA<small>SPACE / INTERIORS</small></b></a><p>Москва · дизайн интерьеров<br />и ремонт под ключ</p><a href="#top">Наверх ↑</a><div class="footer-bottom"><small>© <span id="year"></span> Aurora Space</small><b>ДЕМО-САЙТ · КОНЦЕПТ ДЛЯ ПОРТФОЛИО · СДЕЛАНО PKCODE</b></div></footer>
-    <script src="script.js?v=20260711-2"></script>
+    <script src="script.js?v=20260711-3"></script>
   </body>
 </html>

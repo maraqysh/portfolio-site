@@ -9,6 +9,7 @@ function setMobileMenu(open) {
   menuToggle.classList.toggle('active', open);
   mobileMenu.classList.toggle('open', open);
   menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
   mobileMenu.setAttribute('aria-hidden', String(!open));
   document.body.style.overflow = open ? 'hidden' : '';
 }
@@ -25,6 +26,7 @@ document.querySelectorAll('.menu-tab').forEach((tab) => {
       const active = item === tab;
       item.classList.toggle('active', active);
       item.setAttribute('aria-selected', String(active));
+      item.tabIndex = active ? 0 : -1;
     });
     document.querySelectorAll('.menu-list').forEach((panel) => {
       const active = panel.dataset.panel === menuName;
@@ -39,6 +41,21 @@ document.querySelectorAll('.menu-tab').forEach((tab) => {
   });
 });
 
+const menuTabs = [...document.querySelectorAll('.menu-tab')];
+menuTabs.forEach((tab, index) => {
+  tab.addEventListener('keydown', (event) => {
+    let nextIndex = null;
+    if (event.key === 'ArrowDown' || event.key === 'ArrowRight') nextIndex = (index + 1) % menuTabs.length;
+    if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') nextIndex = (index - 1 + menuTabs.length) % menuTabs.length;
+    if (event.key === 'Home') nextIndex = 0;
+    if (event.key === 'End') nextIndex = menuTabs.length - 1;
+    if (nextIndex === null) return;
+    event.preventDefault();
+    menuTabs[nextIndex].focus();
+    menuTabs[nextIndex].click();
+  });
+});
+
 function openBooking() {
   setMobileMenu(false);
   bookingForm.hidden = false;
@@ -49,13 +66,16 @@ function openBooking() {
 
 function closeBooking() {
   bookingModal.close();
-  document.body.classList.remove('modal-open');
 }
 
 document.querySelectorAll('.booking-button').forEach((button) => button.addEventListener('click', openBooking));
 document.querySelector('.modal-close').addEventListener('click', closeBooking);
 bookingModal.addEventListener('click', (event) => {
   if (event.target === bookingModal) closeBooking();
+});
+bookingModal.addEventListener('close', () => document.body.classList.remove('modal-open'));
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && mobileMenu.classList.contains('open')) setMobileMenu(false);
 });
 
 bookingForm.addEventListener('submit', (event) => {
@@ -66,7 +86,8 @@ bookingForm.addEventListener('submit', (event) => {
 });
 
 const dateInput = document.querySelector('input[type="date"]');
-dateInput.min = new Date().toISOString().split('T')[0];
+const now = new Date();
+dateInput.min = new Date(now.getTime() - now.getTimezoneOffset() * 60_000).toISOString().split('T')[0];
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {

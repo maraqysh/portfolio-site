@@ -6,12 +6,16 @@ function setMenu(open) {
   menuToggle.classList.toggle('active', open);
   mobileMenu.classList.toggle('open', open);
   menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
   mobileMenu.setAttribute('aria-hidden', String(!open));
   document.body.classList.toggle('menu-open', open);
 }
 
 menuToggle.addEventListener('click', () => setMenu(!mobileMenu.classList.contains('open')));
 mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && mobileMenu.classList.contains('open')) setMenu(false);
+});
 window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 28));
 
 document.querySelectorAll('[data-compare]').forEach((compare) => {
@@ -41,6 +45,10 @@ function calculate() {
 }
 
 document.getElementById('calc-form').addEventListener('input', calculate);
+area.addEventListener('change', () => {
+  area.value = Math.max(20, Math.min(500, Number(area.value) || 20));
+  calculate();
+});
 calculate();
 
 const observer = new IntersectionObserver((entries) => {

@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260711-5" />
+    <link rel="stylesheet" href="styles.css?v=20260711-6" />
   </head>
   <body>
     <a class="skip-link" href="#main">Перейти к содержанию</a>
@@ -43,7 +43,7 @@
 
     <main id="main">
       <section class="hero" id="top">
-        <img class="hero-image" src="assets/sreda-hero.jpg" alt="Солнечный интерьер кофейни Среда, чашка капучино и свежий круассан" />
+        <img class="hero-image" src="assets/sreda-hero.jpg" alt="Солнечный интерьер кофейни Среда, чашка капучино и свежий круассан" decoding="async" fetchpriority="high" />
         <div class="hero-shade"></div>
         <div class="hero-copy">
           <p class="kicker"><span></span> Городская кофейня · Москва</p>
@@ -76,27 +76,27 @@
 
         <div class="menu-layout">
           <div class="menu-tabs reveal" role="tablist" aria-label="Разделы меню">
-            <button class="menu-tab active" type="button" role="tab" aria-selected="true" data-menu="coffee">Кофе <span>01</span></button>
-            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-menu="breakfast">Завтраки <span>02</span></button>
-            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-menu="desserts">Десерты <span>03</span></button>
+            <button class="menu-tab active" id="tab-coffee" type="button" role="tab" aria-selected="true" aria-controls="panel-coffee" tabindex="0" data-menu="coffee">Кофе <span>01</span></button>
+            <button class="menu-tab" id="tab-breakfast" type="button" role="tab" aria-selected="false" aria-controls="panel-breakfast" tabindex="-1" data-menu="breakfast">Завтраки <span>02</span></button>
+            <button class="menu-tab" id="tab-desserts" type="button" role="tab" aria-selected="false" aria-controls="panel-desserts" tabindex="-1" data-menu="desserts">Десерты <span>03</span></button>
           </div>
 
-          <div class="menu-panel reveal" id="menu-panel" role="tabpanel" aria-live="polite">
-            <div class="menu-list active" data-panel="coffee">
+          <div class="menu-panel reveal" id="menu-panel" aria-live="polite">
+            <div class="menu-list active" id="panel-coffee" role="tabpanel" aria-labelledby="tab-coffee" data-panel="coffee">
               <article><div><h3>Капучино</h3><p>Эспрессо, молоко, плотная пенка</p></div><b>290 / 340 ₽</b></article>
               <article><div><h3>Флэт уайт</h3><p>Двойной эспрессо и молоко</p></div><b>330 ₽</b></article>
               <article><div><h3>Фильтр-кофе</h3><p>Зерно недели, чистый яркий вкус</p></div><b>260 ₽</b></article>
               <article><div><h3>Раф с халвой</h3><p>Сливки, ваниль и кунжутная халва</p></div><b>390 ₽</b></article>
               <article><div><h3>Матча-тоник</h3><p>Матча, тоник и свежий лайм</p></div><b>380 ₽</b></article>
             </div>
-            <div class="menu-list" data-panel="breakfast" hidden>
+            <div class="menu-list" id="panel-breakfast" role="tabpanel" aria-labelledby="tab-breakfast" data-panel="breakfast" hidden>
               <article><div><h3>Сырники</h3><p>Сметана, вишня и фисташка</p></div><b>490 ₽</b></article>
               <article><div><h3>Скрэмбл на бриоши</h3><p>Авокадо, томаты и зелень</p></div><b>570 ₽</b></article>
               <article><div><h3>Зелёная гречка</h3><p>Яйцо пашот, пармезан, шпинат</p></div><b>520 ₽</b></article>
               <article><div><h3>Круассан с лососем</h3><p>Творожный сыр, огурец, салат</p></div><b>590 ₽</b></article>
               <article><div><h3>Гранола</h3><p>Йогурт, сезонные ягоды и мёд</p></div><b>440 ₽</b></article>
             </div>
-            <div class="menu-list" data-panel="desserts" hidden>
+            <div class="menu-list" id="panel-desserts" role="tabpanel" aria-labelledby="tab-desserts" data-panel="desserts" hidden>
               <article><div><h3>Баскский чизкейк</h3><p>Карамельная корочка и нежный центр</p></div><b>390 ₽</b></article>
               <article><div><h3>Медовик</h3><p>Тонкие коржи и сметанный крем</p></div><b>370 ₽</b></article>
               <article><div><h3>Лимонный тарт</h3><p>Курд, меренга и песочная основа</p></div><b>390 ₽</b></article>
@@ -196,8 +196,8 @@
       <p class="kicker dark"><span></span> Бронирование</p>
       <h2 id="booking-title">Ваш столик<br /><em>уже ждёт.</em></h2>
       <form class="booking-form">
-        <label>Ваше имя<input type="text" name="name" placeholder="Как к вам обращаться" required /></label>
-        <label>Телефон<input type="tel" name="phone" placeholder="+7 999 000-00-00" required /></label>
+        <label>Ваше имя<input type="text" name="name" placeholder="Как к вам обращаться" autocomplete="name" required /></label>
+        <label>Телефон<input type="tel" name="phone" placeholder="+7 999 000-00-00" autocomplete="tel" inputmode="tel" required /></label>
         <div><label>Дата<input type="date" name="date" required /></label><label>Гостей<select name="guests"><option>1 гость</option><option>2 гостя</option><option>3 гостя</option><option>4 гостя</option><option>5+ гостей</option></select></label></div>
         <button class="button button-dark" type="submit">Забронировать <span>↗</span></button>
         <p>Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
@@ -205,6 +205,6 @@
       <div class="booking-success" hidden><span>✓</span><h3>Столик забронирован!</h3><p>Мы скоро позвоним, чтобы подтвердить детали.</p></div>
     </dialog>
 
-    <script src="script.js?v=20260711-1"></script>
+    <script src="script.js?v=20260711-2"></script>
   </body>
 </html>
