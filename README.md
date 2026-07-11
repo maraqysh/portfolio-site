@@ -2,6 +2,8 @@
 
 Статический сайт-портфолио и три демонстрационных проекта:
 
+Production: https://pkvisitcard.netlify.app/
+
 - `/` — главная страница портфолио;
 - `/aurora/` — студия дизайна интерьеров;
 - `/clinic/` — частная клиника;
@@ -23,3 +25,5 @@ python3 -m http.server 8000
 - Publish directory: `.`
 
 Все проекты используют обычные HTML, CSS и JavaScript, поэтому сборка не требуется.
+
+Production-конфигурация хранится в `netlify.toml`, правила безопасности и кеширования — в `_headers`. Файлы `robots.txt` и `sitemap.xml` используют production-адрес Netlify.
