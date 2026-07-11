@@ -19,6 +19,7 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
 body { margin: 0; overflow-x: hidden; background: var(--cream); color: var(--ink); font-family: var(--body); }
 a { color: inherit; text-decoration: none; }
 button, input, select { font: inherit; }
+section[id] { scroll-margin-top: 92px; }
 
 .header {
   position: fixed; z-index: 30; top: 16px; left: 2.5vw; right: 2.5vw; height: 68px;
@@ -198,16 +199,22 @@ h1 em, h2 em { color: var(--coral); font-style: normal; }
   .section-title h2 { font-size: 38px; }
   .section-title > p { width: 100%; margin-top: 24px; }
   .directions { border-radius: 34px 34px 0 0; }
-  .direction-grid { grid-template-columns: 1fr; }
+  .direction-grid { grid-template-columns: minmax(0,1fr); }
   .direction-card, .direction-card:nth-child(1), .direction-card:nth-child(4) { grid-column: auto; grid-row: auto; min-height: 330px; }
-  .approach { padding: 20px; grid-template-columns: 1fr; }
+  .direction-card, .direction-card h3, .direction-card p { min-width: 0; overflow-wrap: anywhere; }
+  .approach { padding: 20px; grid-template-columns: minmax(0,1fr); }
+  .approach > * { min-width: 0; width: 100%; }
   .approach-visual, .approach-copy { border-radius: 30px; }
   .approach-visual { padding: 28px; }
   .approach-copy { padding: 60px 24px; }
   .approach-copy h2 { font-size: 34px; }
-  .doctor-grid { grid-template-columns: 1fr; }
+  .doctor-grid { grid-template-columns: minmax(0,1fr); }
+  .doctor-card, .doctor-info, .doctor-info > * { min-width: 0; }
+  .doctor-info h3 { overflow-wrap: anywhere; }
   .doctor-portrait { height: 350px; }
-  .appointment { margin: 0 12px 12px; padding: 70px 20px; grid-template-columns: 1fr; border-radius: 34px; }
+  .appointment { margin: 0 12px 12px; padding: 70px 20px; grid-template-columns: minmax(0,1fr); border-radius: 34px; }
+  .appointment > *, .appointment-form, .appointment-copy { min-width: 0; }
+  .appointment-copy h2, .appointment-copy p { overflow-wrap: anywhere; }
   .appointment-copy h2 { font-size: 38px; }
   .appointment-form { padding: 26px 20px; box-shadow: 8px 8px 0 var(--ink); }
   .clinic-contact { display: block; }
