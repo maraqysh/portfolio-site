@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Среда — городская кофейня с кофе собственной обжарки, завтраками весь день и тёплой атмосферой." />
+    <meta name="theme-color" content="#f2e8d8" />
+    <title>Среда — кофе и люди</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20260711-4" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Среда — на главную">
+        <span class="brand-mark" aria-hidden="true">С</span>
+        <span>СРЕДА<small>coffee & people</small></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="#menu">Меню</a>
+        <a href="#story">О нас</a>
+        <a href="#events">События</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <button class="booking-button header-booking" type="button">Забронировать стол</button>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+    </header>
+
+    <div class="mobile-menu" aria-hidden="true">
+      <nav aria-label="Мобильная навигация">
+        <a href="#menu">Меню <span>01</span></a>
+        <a href="#story">О нас <span>02</span></a>
+        <a href="#events">События <span>03</span></a>
+        <a href="#contacts">Контакты <span>04</span></a>
+      </nav>
+      <button class="booking-button mobile-booking" type="button">Забронировать стол</button>
+    </div>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <img class="hero-image" src="assets/sreda-hero.jpg" alt="Солнечный интерьер кофейни Среда, чашка капучино и свежий круассан" />
+        <div class="hero-shade"></div>
+        <div class="hero-copy">
+          <p class="kicker"><span></span> Городская кофейня · Москва</p>
+          <h1>Место, где день<br /><em>становится теплее.</em></h1>
+          <p class="hero-text">Варим кофе, печём круассаны и собираем людей за одним столом — каждый день с 8 утра.</p>
+          <div class="hero-actions">
+            <a class="button button-light" href="#menu">Посмотреть меню <span>↓</span></a>
+            <button class="text-button booking-button" type="button">Забронировать стол <span>↗</span></button>
+          </div>
+        </div>
+        <div class="hero-status">
+          <span><i></i> Сейчас открыто</span>
+          <p>Сегодня до 22:00</p>
+        </div>
+        <p class="hero-edition" aria-hidden="true">ISSUE 01 · SUMMER 2026</p>
+        <a class="hero-address" href="#contacts"><span>Москва, Покровка, 19</span><b>Показать на карте ↘</b></a>
+      </section>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>КОФЕ СВОЕЙ ОБЖАРКИ</span><i>✦</i><span>ЗАВТРАКИ ВЕСЬ ДЕНЬ</span><i>✦</i><span>ЛЮДИ РЯДОМ</span><i>✦</i>
+          <span>КОФЕ СВОЕЙ ОБЖАРКИ</span><i>✦</i><span>ЗАВТРАКИ ВЕСЬ ДЕНЬ</span><i>✦</i><span>ЛЮДИ РЯДОМ</span><i>✦</i>
+        </div>
+      </div>
+
+      <section class="menu-section section" id="menu">
+        <div class="section-title reveal">
+          <p class="kicker dark"><span></span> Что сегодня</p>
+          <h2>Любимые вкусы.<br /><em>Каждый день.</em></h2>
+        </div>
+
+        <div class="menu-layout">
+          <div class="menu-tabs reveal" role="tablist" aria-label="Разделы меню">
+            <button class="menu-tab active" type="button" role="tab" aria-selected="true" data-menu="coffee">Кофе <span>01</span></button>
+            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-menu="breakfast">Завтраки <span>02</span></button>
+            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-menu="desserts">Десерты <span>03</span></button>
+          </div>
+
+          <div class="menu-panel reveal" id="menu-panel" role="tabpanel" aria-live="polite">
+            <div class="menu-list active" data-panel="coffee">
+              <article><div><h3>Капучино</h3><p>Эспрессо, молоко, плотная пенка</p></div><b>290 / 340 ₽</b></article>
+              <article><div><h3>Флэт уайт</h3><p>Двойной эспрессо и молоко</p></div><b>330 ₽</b></article>
+              <article><div><h3>Фильтр-кофе</h3><p>Зерно недели, чистый яркий вкус</p></div><b>260 ₽</b></article>
+              <article><div><h3>Раф с халвой</h3><p>Сливки, ваниль и кунжутная халва</p></div><b>390 ₽</b></article>
+              <article><div><h3>Матча-тоник</h3><p>Матча, тоник и свежий лайм</p></div><b>380 ₽</b></article>
+            </div>
+            <div class="menu-list" data-panel="breakfast" hidden>
+              <article><div><h3>Сырники</h3><p>Сметана, вишня и фисташка</p></div><b>490 ₽</b></article>
+              <article><div><h3>Скрэмбл на бриоши</h3><p>Авокадо, томаты и зелень</p></div><b>570 ₽</b></article>
+              <article><div><h3>Зелёная гречка</h3><p>Яйцо пашот, пармезан, шпинат</p></div><b>520 ₽</b></article>
+              <article><div><h3>Круассан с лососем</h3><p>Творожный сыр, огурец, салат</p></div><b>590 ₽</b></article>
+              <article><div><h3>Гранола</h3><p>Йогурт, сезонные ягоды и мёд</p></div><b>440 ₽</b></article>
+            </div>
+            <div class="menu-list" data-panel="desserts" hidden>
+              <article><div><h3>Баскский чизкейк</h3><p>Карамельная корочка и нежный центр</p></div><b>390 ₽</b></article>
+              <article><div><h3>Медовик</h3><p>Тонкие коржи и сметанный крем</p></div><b>370 ₽</b></article>
+              <article><div><h3>Лимонный тарт</h3><p>Курд, меренга и песочная основа</p></div><b>390 ₽</b></article>
+              <article><div><h3>Миндальный круассан</h3><p>Франжипан и лепестки миндаля</p></div><b>320 ₽</b></article>
+              <article><div><h3>Шоколадное печенье</h3><p>Тёмный шоколад и морская соль</p></div><b>210 ₽</b></article>
+            </div>
+          </div>
+
+          <aside class="menu-note reveal">
+            <span>+</span>
+            <p>Готовим на обычном, безлактозном, овсяном и кокосовом молоке.</p>
+            <a href="#contacts">Спросить бариста ↗</a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="story section" id="story">
+        <div class="story-art reveal" aria-hidden="true">
+          <div class="sun"></div>
+          <div class="cup-illustration"><span></span></div>
+          <p>slow<br />mornings</p>
+        </div>
+        <div class="story-copy reveal">
+          <p class="kicker"><span></span> Наша история</p>
+          <h2>Мы открыли «Среду», чтобы у города было <em>ещё одно любимое место.</em></h2>
+          <div class="story-columns">
+            <p>Здесь можно встретиться за завтраком, поработать у окна или просто остаться наедине с хорошей чашкой кофе.</p>
+            <p>Выбираем зерно у небольших фермеров, обжариваем бережно и готовим всё на открытой кухне.</p>
+          </div>
+          <div class="story-facts">
+            <div><b>7</b><span>лет вместе<br />с районом</span></div>
+            <div><b>12</b><span>стран в нашей<br />кофейной карте</span></div>
+            <div><b>08:00</b><span>каждое утро<br />без выходных</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="values section" id="principles" aria-labelledby="principles-title">
+        <div class="values-intro reveal">
+          <p class="kicker dark"><span></span> Наш подход</p>
+          <h2 id="principles-title">Три принципа.<br /><em>Без лишнего шума.</em></h2>
+          <p>Не обещаем невозможного — просто внимательно относимся к кофе, людям и деталям вокруг.</p>
+        </div>
+
+        <div class="value-list">
+          <article class="value-item reveal"><span class="value-number">01</span><div><h3>Честный кофе</h3><p>Знаем происхождение каждого зерна и бережно раскрываем его вкус в чашке.</p></div><span class="value-arrow" aria-hidden="true">↗</span></article>
+          <article class="value-item reveal"><span class="value-number">02</span><div><h3>Тёплый сервис</h3><p>Помним ваши привычки, но не нарушаем личное пространство. Всё по-человечески.</p></div><span class="value-arrow" aria-hidden="true">↗</span></article>
+          <article class="value-item reveal"><span class="value-number">03</span><div><h3>Меньше лишнего</h3><p>Выбираем локальные продукты, сортируем отходы и не усложняем то, что может быть простым.</p></div><span class="value-arrow" aria-hidden="true">↗</span></article>
+        </div>
+      </section>
+
+      <section class="events section" id="events">
+        <div class="events-heading reveal">
+          <div><p class="kicker dark"><span></span> Афиша</p><h2>Встречаемся<br /><em>в «Среде».</em></h2></div>
+          <p>Лекции, камерные концерты и дегустации — хороший повод оказаться рядом.</p>
+        </div>
+        <div class="event-list">
+          <article class="event reveal"><time datetime="2026-07-18"><b>18</b>июля</time><div><span>Дегустация</span><h3>Как читать вкус кофе</h3><p>Пробуем зерно из Эфиопии, Кении и Колумбии вместе с нашим шеф-бариста.</p></div><b class="event-time">19:00</b><button class="round-button booking-button" type="button" aria-label="Записаться на дегустацию">↗</button></article>
+          <article class="event reveal"><time datetime="2026-07-25"><b>25</b>июля</time><div><span>Музыка</span><h3>Виниловый вечер</h3><p>Соул, джаз и фанк на пластинках. Можно принести свою любимую.</p></div><b class="event-time">20:00</b><button class="round-button booking-button" type="button" aria-label="Записаться на виниловый вечер">↗</button></article>
+          <article class="event reveal"><time datetime="2026-08-02"><b>02</b>августа</time><div><span>Бранч</span><h3>Воскресный стол</h3><p>Большой общий завтрак от шефа и новые знакомства без спешки.</p></div><b class="event-time">12:00</b><button class="round-button booking-button" type="button" aria-label="Записаться на воскресный стол">↗</button></article>
+        </div>
+      </section>
+
+      <section class="quote-section">
+        <p class="quote-mark">“</p>
+        <blockquote class="reveal">Кофе — это маленькая пауза,<br />в которой вдруг <em>всё на месте.</em></blockquote>
+        <div class="quote-sign reveal"><span></span><p>Команда «Среды»</p></div>
+      </section>
+
+      <section class="contacts section" id="contacts">
+        <div class="contact-card reveal">
+          <p class="kicker"><span></span> Приходите в гости</p>
+          <h2>Мы рядом.<br /><em>Каждый день.</em></h2>
+          <div class="contact-grid">
+            <div><span>Адрес</span><p>Москва,<br />ул. Покровка, 19</p><a href="https://yandex.ru/maps/?text=Москва%20Покровка%2019" target="_blank" rel="noreferrer">Построить маршрут ↗</a></div>
+            <div><span>Часы работы</span><p>Пн—Пт: 08:00–22:00<br />Сб—Вс: 09:00–23:00</p><button class="booking-button" type="button">Забронировать стол ↗</button></div>
+            <div><span>Связаться</span><p><a href="tel:+74951234567">+7 495 123-45-67</a><br /><a href="mailto:hello@sredacoffee.ru">hello@sredacoffee.ru</a></p><a href="https://t.me/sredacoffee" target="_blank" rel="noreferrer">Telegram ↗</a></div>
+          </div>
+        </div>
+        <div class="map-card reveal" aria-label="Схема расположения кофейни">
+          <div class="map-grid"></div><span class="road road-a">Покровка</span><span class="road road-b">Чистопрудный б-р</span>
+          <div class="map-pin"><span>С</span><p>Вы здесь</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand footer-brand" href="#top"><span class="brand-mark">С</span><span>СРЕДА<small>coffee & people</small></span></a>
+      <p>Кофе, еда и люди.<br />Москва · Покровка, 19</p>
+      <div><a href="https://t.me/sredacoffee" target="_blank" rel="noreferrer">Telegram ↗</a><a href="#top">Наверх ↑</a></div>
+      <small>© <span id="year"></span> Среда. Все права защищены.</small>
+      <p class="demo-notice"><b>Демо-сайт</b><span>Концепт для портфолио · не является официальным сайтом кофейни</span></p>
+    </footer>
+
+    <dialog class="booking-modal" aria-labelledby="booking-title">
+      <button class="modal-close" type="button" aria-label="Закрыть окно">×</button>
+      <p class="kicker dark"><span></span> Бронирование</p>
+      <h2 id="booking-title">Ваш столик<br /><em>уже ждёт.</em></h2>
+      <form class="booking-form">
+        <label>Ваше имя<input type="text" name="name" placeholder="Как к вам обращаться" required /></label>
+        <label>Телефон<input type="tel" name="phone" placeholder="+7 999 000-00-00" required /></label>
+        <div><label>Дата<input type="date" name="date" required /></label><label>Гостей<select name="guests"><option>1 гость</option><option>2 гостя</option><option>3 гостя</option><option>4 гостя</option><option>5+ гостей</option></select></label></div>
+        <button class="button button-dark" type="submit">Забронировать <span>↗</span></button>
+        <p>Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+      </form>
+      <div class="booking-success" hidden><span>✓</span><h3>Столик забронирован!</h3><p>Мы скоро позвоним, чтобы подтвердить детали.</p></div>
+    </dialog>
+
+    <script src="script.js?v=20260711-1"></script>
+  </body>
+</html>
