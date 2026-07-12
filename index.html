@@ -3,233 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Pkcode — команда веб-разработчиков. Создаём быстрые, понятные и выразительные сайты для бизнеса."
-    />
-    <meta name="theme-color" content="#f2f0e9" />
-    <title>Pkcode — сайты с идеей и характером</title>
+    <meta name="description" content="PKCODE — дизайн и разработка сайтов, которые невозможно спутать. Стратегия, интерфейс, анимация и запуск." />
+    <meta name="theme-color" content="#f4f2ec" />
+    <title>PKCODE — digital experience studio</title>
     <link rel="canonical" href="https://pkvisitcard.netlify.app/" />
-    <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml" sizes="any" />
-    <link rel="shortcut icon" href="assets/favicon.svg?v=2" />
-    <link rel="apple-touch-icon" href="assets/favicon-180.png?v=2" sizes="180x180" />
+    <link rel="icon" href="assets/favicon.svg?v=4" type="image/svg+xml" sizes="any" />
+    <link rel="apple-touch-icon" href="assets/favicon-180.png?v=4" sizes="180x180" />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="PKCODE" />
-    <meta property="og:title" content="PKCODE — сайты с идеей и характером" />
-    <meta property="og:description" content="Дизайн, адаптивная разработка и запуск выразительных сайтов для бизнеса." />
+    <meta property="og:title" content="PKCODE — digital experience studio" />
+    <meta property="og:description" content="Проектируем и разрабатываем сайты, которые невозможно спутать." />
     <meta property="og:url" content="https://pkvisitcard.netlify.app/" />
     <meta property="og:image" content="https://pkvisitcard.netlify.app/assets/og-cover.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css?v=20260711-7" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20260712-2" />
   </head>
   <body>
     <a class="skip-link" href="#main">Перейти к содержанию</a>
-    <div class="noise" aria-hidden="true"></div>
+    <div class="intro" aria-hidden="true"><div></div><div></div><div></div><span>PKCODE<small>digital experience studio</small></span></div>
+    <div class="cursor" aria-hidden="true"><span>OPEN</span></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
-    <header class="site-header">
-      <a class="logo" href="#top" aria-label="На главную">K<span>.</span></a>
-
-      <nav class="desktop-nav" aria-label="Основная навигация">
-        <a href="#works">Работы</a>
-        <a href="#services">Услуги</a>
-        <a href="#process">Процесс</a>
-      </nav>
-
-      <a class="header-contact" href="#contact">Обсудить проект <span>↗</span></a>
-      <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false">
-        <span></span><span></span>
-      </button>
+    <header class="header-shell">
+      <a class="logo magnetic" href="#top" aria-label="PKCODE — на главную"><b>PK</b><span>CODE</span></a>
+      <nav class="desktop-nav" aria-label="Основная навигация"><a href="#work">Проекты</a><a href="#studio">Студия</a><a href="#process">Процесс</a></nav>
+      <a class="talk magnetic" href="#contact"><i></i>Начать проект <span>↗</span></a>
+      <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
     </header>
 
     <div class="mobile-menu" aria-hidden="true">
-      <a href="#works">Работы</a>
-      <a href="#services">Услуги</a>
-      <a href="#process">Процесс</a>
-      <a href="#contact">Связаться</a>
+      <div class="mobile-menu-head"><span>PKCODE / MENU</span><span>2026</span></div>
+      <nav><a href="#work"><small>01</small>Проекты</a><a href="#studio"><small>02</small>Студия</a><a href="#process"><small>03</small>Процесс</a><a href="#contact"><small>04</small>Контакты</a></nav>
+      <p>Москва · Работаем по всему миру</p>
     </div>
 
     <main id="main">
-      <section class="hero section-pad" id="top">
-        <div class="hero-top reveal">
-          <p class="eyebrow"><span></span> Команда веб-разработчиков · Москва</p>
-          <p class="hero-note">Проектируем, собираем и запускаем сайты, которые приятно смотреть и удобно использовать.</p>
+      <section class="hero" id="top">
+        <canvas id="living-field" aria-hidden="true"></canvas>
+        <div class="hero-meta"><span>Independent digital studio</span><span>55.7558° N / 37.6173° E</span><span>Scroll to explore ↓</span></div>
+
+        <div class="hero-copy">
+          <p class="hero-overline">Дизайн <i>×</i> Код <i>×</i> Движение</p>
+          <h1 aria-label="Сайты, которые невозможно спутать">
+            <span class="title-row"><b>САЙТЫ,</b></span>
+            <span class="title-row shifted"><b>КОТОРЫЕ</b></span>
+            <span class="title-row blue"><b>НЕВОЗМОЖНО</b></span>
+            <span class="title-row last"><b>СПУТАТЬ.</b><em>©26</em></span>
+          </h1>
         </div>
 
-        <h1 class="hero-title reveal">
-          <span>Сайты с идеей.</span>
-          <span class="offset-line">Сайты с характером.</span>
-        </h1>
+        <a class="float-card float-aurora" href="aurora/" aria-label="Aurora Space — открыть проект" data-cursor="VIEW"><img src="aurora/assets/living-after.jpg" alt="Интерьер Aurora Space" width="1350" height="900" /><span>Aurora Space / 01</span></a>
+        <a class="float-card float-clinic" href="clinic/" aria-label="Forma Clinic — открыть проект" data-cursor="VIEW"><img src="assets/clinic-hero.jpg" alt="Врач Forma Clinic" width="1600" height="1067" /><span>Forma Clinic / 02</span></a>
+        <a class="float-card float-coffee" href="coffee/" aria-label="Среда — открыть проект" data-cursor="VIEW"><img src="coffee/assets/sreda-hero.jpg" alt="Кофейня Среда" width="1600" height="1067" /><span>Среда / 03</span></a>
 
-        <div class="hero-bottom reveal">
-          <a class="circle-link" href="#works" aria-label="Смотреть работы">
-            <span>Смотреть<br />работы</span>
-            <b>↓</b>
+        <div class="hero-bottom"><p>Создаём цифровые впечатления для брендов, которым тесно в шаблонах.</p><a class="hero-cta magnetic" href="#work"><span>Смотреть проекты</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 16h19M18 9l7 7-7 7" /></svg></a></div>
+      </section>
+
+      <div class="kinetic-line" aria-hidden="true"><div><span>STRATEGY</span><i>↗</i><span>ART DIRECTION</span><i>↗</i><span>INTERACTION</span><i>↗</i><span>DEVELOPMENT</span><i>↗</i><span>STRATEGY</span><i>↗</i><span>ART DIRECTION</span><i>↗</i><span>INTERACTION</span><i>↗</i><span>DEVELOPMENT</span><i>↗</i></div></div>
+
+      <section class="work" id="work">
+        <div class="work-intro pad reveal-mask"><p><span>01</span>Selected work</p><h2>Три проекта.<br />Три разных <em>мира.</em></h2><small>Каждый начинается не с шаблона,<br />а с собственной идеи.</small></div>
+
+        <article class="case case-aurora tilt-card" data-cursor="OPEN">
+          <a href="aurora/" aria-label="Открыть проект Aurora Space">
+            <div class="case-image"><img src="aurora/assets/living-after.jpg" alt="Интерьер Aurora Space" width="1350" height="900" loading="lazy" decoding="async" /></div>
+            <div class="case-info"><span>01 / Interior studio</span><h3>AURORA<br /><i>SPACE</i></h3><p>Концепция · UX/UI · Разработка</p><b>↗</b></div>
           </a>
+        </article>
 
-          <div class="availability-card">
-            <div class="avatar" aria-hidden="true">К</div>
-            <div>
-              <span class="status"><i></i> Открыты к проектам</span>
-              <p>Можно начать в ближайшее время</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-orbit" aria-hidden="true">
-          <div class="orbit-ring"></div>
-          <div class="orbit-core">&lt;/&gt;</div>
-          <span class="orbit-dot dot-one"></span>
-          <span class="orbit-dot dot-two"></span>
-        </div>
-      </section>
-
-      <section class="works section-pad" id="works">
-        <div class="section-heading reveal">
-          <div>
-            <p class="eyebrow light"><span></span> Избранные проекты</p>
-            <h2>Работы, которыми<br />мы гордимся</h2>
-          </div>
-          <p>Каждый проект — это баланс эстетики, смысла и понятного пользовательского сценария.</p>
-        </div>
-
-        <div class="project-list">
-          <article class="project project-large reveal">
-            <a class="project-visual visual-aurora" href="aurora/" aria-label="Открыть сайт студии интерьеров Aurora Space">
-              <div class="aurora-preview">
-                <img src="aurora/assets/living-after.jpg" alt="Интерьер студии Aurora Space" loading="lazy" decoding="async" />
-                <div class="aurora-preview-copy">
-                  <span>ДИЗАЙН ИНТЕРЬЕРОВ</span>
-                  <b>AURORA<br />SPACE</b>
-                  <small>interiors / architecture</small>
-                </div>
-              </div>
-              <span class="view-button">Смотреть кейс ↗</span>
+        <div class="case-pair pad">
+          <article class="case case-clinic tilt-card" data-cursor="OPEN">
+            <a href="clinic/" aria-label="Открыть проект Forma Clinic">
+              <div class="case-image"><img src="assets/clinic-hero.jpg" alt="Врач частной клиники Forma" width="1600" height="1067" loading="lazy" decoding="async" /></div>
+              <div class="case-info"><span>02 / Private clinic</span><h3>FORMA<br /><i>CLINIC</i></h3><p>Стратегия · UX/UI · Разработка</p><b>↗</b></div>
             </a>
-            <div class="project-meta">
-              <div><span>01</span><h3>Aurora Space</h3></div>
-              <p>Студия интерьеров · Дизайн · Разработка</p>
-            </div>
           </article>
-
-          <article class="project reveal">
-            <a class="project-visual visual-studio" href="clinic/" aria-label="Открыть сайт частной клиники Forma">
-              <div class="clinic-preview">
-                <img src="assets/clinic-hero.jpg" alt="Врач частной клиники Forma" loading="lazy" decoding="async" />
-                <div class="clinic-preview-copy">
-                  <span>ЧАСТНАЯ КЛИНИКА</span>
-                  <b>FORMA<br />CLINIC</b>
-                </div>
-              </div>
-              <span class="view-button">Смотреть кейс ↗</span>
+          <article class="case case-coffee tilt-card" data-cursor="OPEN">
+            <a href="coffee/" aria-label="Открыть проект кофейни Среда">
+              <div class="case-image"><img src="coffee/assets/sreda-hero.jpg" alt="Интерьер кофейни Среда" width="1600" height="1067" loading="lazy" decoding="async" /></div>
+              <div class="case-info"><span>03 / Coffee & people</span><h3>СРЕДА</h3><p>Арт-дирекшн · UX/UI · Разработка</p><b>↗</b></div>
             </a>
-            <div class="project-meta">
-              <div><span>02</span><h3>Forma Clinic</h3></div>
-              <p>Частная клиника · Дизайн · Разработка</p>
-            </div>
-          </article>
-
-          <article class="project reveal">
-            <a class="project-visual visual-coffee" href="coffee/" aria-label="Открыть сайт кофейни Sreda">
-              <div class="coffee-preview">
-                <img src="coffee/assets/sreda-hero.jpg" alt="Интерьер кофейни Среда" loading="lazy" decoding="async" />
-                <div class="coffee-preview-copy">
-                  <span>ГОРОДСКАЯ КОФЕЙНЯ</span>
-                  <b>СРЕДА</b>
-                  <small>coffee & people</small>
-                </div>
-              </div>
-              <span class="view-button">Смотреть кейс ↗</span>
-            </a>
-            <div class="project-meta">
-              <div><span>03</span><h3>Sreda Coffee</h3></div>
-              <p>Сайт кафе · Дизайн · Разработка</p>
-            </div>
-          </article>
-        </div>
-
-      </section>
-
-      <section class="services section-pad" id="services">
-        <div class="section-heading dark reveal">
-          <div>
-            <p class="eyebrow"><span></span> Чем мы можем помочь</p>
-            <h2>От идеи до<br />готового сайта</h2>
-          </div>
-          <p>Берем на себя весь процесс — от структуры и визуального направления до адаптивной вёрстки и запуска.</p>
-        </div>
-
-        <div class="service-grid">
-          <article class="service-card reveal">
-            <span>01</span>
-            <div class="service-icon icon-design"><i></i><i></i></div>
-            <h3>Дизайн</h3>
-            <p>Продумываем структуру, прототип и визуальную систему, которая помогает бизнесу выделиться.</p>
-            <ul><li>Лендинги</li><li>Многостраничные сайты</li><li>Редизайн</li></ul>
-          </article>
-
-          <article class="service-card accent reveal">
-            <span>02</span>
-            <div class="service-icon icon-code">&lt;/&gt;</div>
-            <h3>Разработка</h3>
-            <p>Собираем быстрые адаптивные сайты с аккуратной анимацией и понятным управлением.</p>
-            <ul><li>Адаптивная вёрстка</li><li>Интерактив и анимации</li><li>Интеграции</li></ul>
-          </article>
-
-          <article class="service-card reveal">
-            <span>03</span>
-            <div class="service-icon icon-launch"><i></i></div>
-            <h3>Запуск</h3>
-            <p>Подключаем домен, аналитику и формы. Проверяем сайт на разных устройствах перед публикацией.</p>
-            <ul><li>Настройка домена</li><li>Базовая SEO-оптимизация</li><li>Поддержка</li></ul>
           </article>
         </div>
       </section>
 
-      <section class="process section-pad" id="process">
-        <div class="process-intro reveal">
-          <p class="eyebrow"><span></span> Как строится работа</p>
-          <h2>Прозрачный процесс.<br />Предсказуемый результат.</h2>
-        </div>
+      <section class="studio" id="studio">
+        <div class="studio-orb" aria-hidden="true"><span>PK</span></div>
+        <div class="studio-copy pad reveal-mask"><p><span>02</span>Наша позиция</p><h2>НЕ ДЕЛАЕМ<br /><i>«КАК У ВСЕХ».</i></h2><div class="studio-text"><b>Сайт — это не декор.</b><p>Это точка контакта, голос бренда и ощущение от бизнеса. Поэтому мы соединяем стратегию, графический дизайн, интерактив и код в одну цельную систему.</p></div></div>
+        <div class="studio-tape" aria-hidden="true"><div>IDEA → SYSTEM → EXPERIENCE → RESULT → IDEA → SYSTEM → EXPERIENCE → RESULT →</div></div>
+      </section>
 
-        <ol class="steps">
-          <li class="reveal"><span>01</span><h3>Знакомство</h3><p>Обсуждаем задачу, аудиторию, сроки и ориентиры. Фиксируем цели проекта.</p><b>1 день</b></li>
-          <li class="reveal"><span>02</span><h3>Концепция</h3><p>Собираем структуру и предлагаем визуальное направление будущего сайта.</p><b>2–4 дня</b></li>
-          <li class="reveal"><span>03</span><h3>Создание</h3><p>Прорабатываем дизайн, собираем адаптивные страницы и добавляем анимации.</p><b>7–14 дней</b></li>
-          <li class="reveal"><span>04</span><h3>Запуск</h3><p>Тестируем, подключаем нужные сервисы и публикуем сайт на вашем домене.</p><b>1–2 дня</b></li>
+      <section class="services pad">
+        <header class="reveal-mask"><p><span>03</span>Capabilities</p><h2>Всё нужное.<br /><i>Ничего лишнего.</i></h2></header>
+        <div class="service-rows">
+          <article class="service-row"><span>01</span><h3>Стратегия и структура</h3><p>Смысл, аудитория, сценарий, прототип</p><b>↗</b></article>
+          <article class="service-row"><span>02</span><h3>Арт-дирекшн и UX/UI</h3><p>Визуальная система, интерфейс, анимация</p><b>↗</b></article>
+          <article class="service-row"><span>03</span><h3>Разработка и запуск</h3><p>Адаптив, интерактив, домен, аналитика</p><b>↗</b></article>
+        </div>
+      </section>
+
+      <section class="process pad" id="process">
+        <div class="process-sticky reveal-mask"><p><span>04</span>Process</p><h2>ОТ ИДЕИ<br />ДО <i>ЭФИРА.</i></h2><small>Прозрачно. Поэтапно. Без сюрпризов в финале.</small></div>
+        <ol class="process-list">
+          <li><span>01</span><div><h3>Погружение</h3><p>Задача, аудитория, рынок и цели проекта.</p></div><b>1 день</b></li>
+          <li><span>02</span><div><h3>Концепция</h3><p>Структура, прототип и визуальное направление.</p></div><b>2–4 дня</b></li>
+          <li><span>03</span><div><h3>Создание</h3><p>Дизайн, адаптивная сборка и интерактив.</p></div><b>7–14 дней</b></li>
+          <li><span>04</span><div><h3>Запуск</h3><p>Тестирование, домен, аналитика и публикация.</p></div><b>1–2 дня</b></li>
         </ol>
       </section>
 
-      <section class="contact section-pad" id="contact">
-        <div class="contact-copy reveal">
-          <p class="eyebrow light"><span></span> Есть задача?</p>
-          <h2>Давайте сделаем<br /><em>что-то классное.</em></h2>
-        </div>
-
-        <div class="contact-action reveal">
-          <p>Расскажите немного о проекте — мы ответим, зададим вопросы и предложим следующий шаг.</p>
-          <a class="big-mail" href="mailto:pkcodecraft@yandex.ru">pkcodecraft@yandex.ru <span>↗</span></a>
-          <div class="socials">
-            <a href="https://t.me/un4uspep" target="_blank" rel="noreferrer">Telegram ↗</a>
-            <a href="#works">Портфолио ↑</a>
-          </div>
-        </div>
-
-        <footer>
-          <p>© <span id="year"></span> Pkcode. Веб-дизайн и разработка.</p>
-          <a href="#top">Наверх ↑</a>
-        </footer>
+      <section class="contact" id="contact">
+        <div class="contact-bg" aria-hidden="true"><span>LET'S</span><span>MAKE</span></div>
+        <div class="contact-content pad reveal-mask"><p><i></i>Открыты к новым проектам</p><h2>ЕСТЬ ИДЕЯ?<br /><em>ДАВАЙТЕ ОЖИВИМ.</em></h2><a class="contact-button magnetic" href="mailto:pkcodecraft@yandex.ru"><span>Написать нам</span><b>↗</b></a></div>
+        <div class="contact-footer pad"><a href="mailto:pkcodecraft@yandex.ru">pkcodecraft@yandex.ru</a><a href="https://t.me/un4uspep" target="_blank" rel="noreferrer">Telegram ↗</a><p>© <span id="year"></span> PKCODE</p><a href="#top">Наверх ↑</a></div>
       </section>
     </main>
 
-    <script src="script.js?v=20260711-1"></script>
+    <script src="script.js?v=20260712-2"></script>
   </body>
 </html>
